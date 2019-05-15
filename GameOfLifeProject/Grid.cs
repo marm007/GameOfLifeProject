@@ -45,8 +45,6 @@ public class Grid
         if (!drawY)
             maxSizeY = sizeY;
 
-        Console.WriteLine(maxSizeX);
-        Console.WriteLine(sizeX);
 
         if (maxSizeX == sizeX)
         {
@@ -237,7 +235,6 @@ public class Grid
             }
             else
             {
-                Console.WriteLine("HER131312E");
                 if (drawX)
                 {
                     for (int i = sizeX; i < maxSizeX; i++)
@@ -283,10 +280,6 @@ public class Grid
     public bool ComputeBounds(PictureBox pPictureBox, PictureBox pictureBox,
         GameOfLife gameOfLife, Graphics g)
     {
-        Console.WriteLine("pPictureBox.Width");
-        Console.WriteLine(pPictureBox.Width);
-        Console.WriteLine("pictureBox.Width");
-        Console.WriteLine(pictureBox.Width);
 
         bool drawX = false;
         bool drawY = false;
@@ -302,12 +295,6 @@ public class Grid
         int maxSizeX = pictureBox.Width / this.cellSize;
         int maxSizeY = pictureBox.Height / this.cellSize;
 
-        Console.WriteLine("AFAFAF");
-
-        Console.WriteLine(this.sizeX);
-        Console.WriteLine(previousSizeX);
-        Console.WriteLine(maxSizeX);
-
 
         if (maxSizeX == previousSizeX && maxSizeY == previousSizeY)
         {
@@ -318,7 +305,6 @@ public class Grid
        
         if (this.sizeX == previousSizeX)
         {
-            Console.WriteLine("xzczxc");
             drawX = true;
             this.sizeX = maxSizeX;
         }
@@ -331,7 +317,6 @@ public class Grid
 
         if (maxSizeX < this.sizeX)
         {
-            Console.WriteLine("xzczxc");
             drawX = true;
             this.sizeX = maxSizeX;
         }
@@ -360,16 +345,10 @@ public class Grid
         {
             for (int j = 0; j < x; j++)
             {
-                //Console.WriteLine("i = " + i + " j = " + j + " " + gameOfLife.Tab[i, j]);
-
                 gameOfLife.Tab[i, j] = tabTmp[i, j];
-                //Console.WriteLine("i = " + i + " j = " + j + " " + gameOfLife.Tab[i, j]);
             }
         }
-        Console.WriteLine("sizeX");
-        Console.WriteLine(sizeX);
-        Console.WriteLine("sizeY");
-        Console.WriteLine(sizeY);
+
         Draw(pictureBox, g, gameOfLife, startSizeX, startSizeY, drawX, drawY);
 
 
@@ -378,7 +357,6 @@ public class Grid
 
     public void RenderGridAndRefresh(Graphics g, PictureBox pictureBox)
     {
-       // pictureBox.Refresh();
 
         int maxSizeX = pictureBox.Width / this.cellSize;
         int maxSizeY = pictureBox.Height / this.cellSize;

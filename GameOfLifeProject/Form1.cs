@@ -71,7 +71,6 @@ namespace GameOfLifeProject
 
             if (!grid.ComputeBounds(pPictureBox, pictureBox1, gameOfLife, g))
             {
-                Console.WriteLine("HERE");
                 flagResize = false;
                 if (gameOfLifeWorker != null)
                 {
@@ -337,7 +336,6 @@ namespace GameOfLifeProject
         {
             grid.CellSize = 4 * cellSizeTracBar.Value;
             grid.SetNewCellSizeAndDraw(g, pictureBox1, gameOfLife);
-            Console.WriteLine("CHANGe");
 
         }
 
